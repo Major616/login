@@ -29,14 +29,11 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.w(TAG,"activity has paused")
     }
-
     //chick has woken up -- activity comes back to the foreground
     override fun onResume() {
         super.onResume()
         Log.w(TAG,"activity has resumed")
     }
-
-
     //death of the chick -- activity no lonnger exists in the ram -- pushed to hdd[hibernate]
     override fun onStop() {
         super.onStop()
@@ -52,11 +49,33 @@ class MainActivity : AppCompatActivity() {
            var webIntent: Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.ndtv.com"))
            startActivity(webIntent)*/
 
+        var c = 10 + 20
+        add(10,20)
         var hIntent:Intent = Intent(this,HomeActivity::class.java)
         hIntent.putExtra("mykey","android-vit-abdul")
-        throw NullPointerException("demo vit exception")
+
+        // throw NullPointerException("demo vit exception")
         startActivity(hIntent)
     }
+
+    private fun add(i: Int, i1: Int):Int {
+        var c = 20
+        var d = 20 * i
+        mul(5,4)
+        return i +i1
+
+    }
+
+    private fun mul(i: Int, i1: Int) {
+        val d = i * i1
+        div(6,3)
+
+    }
+
+    private fun div(i: Int, i1: Int) {
+        add(10,20)
+    }
+
 
     fun inflateXml(){
         var nameEditText = EditText(this)
