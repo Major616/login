@@ -1,7 +1,5 @@
 package com.example.login.kotlinexs
 
-import com.example.login.kotlinexs.Employee
-import com.example.login.kotlinexs.Student
 
 fun main() {
     var someLamda : (Int,Int) -> Int = {a:Int,b:Int -> a+b}

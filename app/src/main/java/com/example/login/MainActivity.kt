@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.login.HomeActivity
 import com.example.login.R
 import com.example.login.kotlinexs.Employee
 
@@ -20,8 +21,10 @@ class MainActivity : AppCompatActivity() {
 
     fun clickHandler(view: View) {
         Log.i("MainActivity-clickhandler","button clicked")
-        var dialIntent: Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:98765432"))  //intent= intention
+        /*var dialIntent: Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:98765432"))  //intent= intention
         var webIntent: Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.ndtv.com"))
-        startActivity(webIntent)
+        startActivity(webIntent)*/
+        var hIntent:Intent = Intent(this, HomeActivity::class.java)
+        startActivity(hIntent)
     }
 }
