@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         var webIntent: Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.ndtv.com"))
         startActivity(webIntent)*/
         var hIntent:Intent = Intent(this, HomeActivity::class.java)
+        hIntent.putExtra("mykey","android-vit-abdul")
         startActivity(hIntent)
     }
 }
